@@ -7,20 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C0DFD752C2DDBF800D5D940 /* DiceResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0DFD742C2DDBF800D5D940 /* DiceResults.swift */; };
 		7C2BC6D22C2B3FA100D526D9 /* High_RollerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2BC6D12C2B3FA100D526D9 /* High_RollerApp.swift */; };
 		7C2BC6D42C2B3FA100D526D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2BC6D32C2B3FA100D526D9 /* ContentView.swift */; };
 		7C2BC6D62C2B3FA300D526D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C2BC6D52C2B3FA300D526D9 /* Assets.xcassets */; };
 		7C2BC6D92C2B3FA300D526D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C2BC6D82C2B3FA300D526D9 /* Preview Assets.xcassets */; };
 		7C2BC6E02C2B3FDB00D526D9 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2BC6DF2C2B3FDB00D526D9 /* DiceView.swift */; };
+		7C50D9452C2F0F050073447C /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C50D9442C2F0F050073447C /* ResultsView.swift */; };
+		7C50D9472C2F22A50073447C /* RollDiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C50D9462C2F22A50073447C /* RollDiceView.swift */; };
+		7C50D94B2C2F26510073447C /* FiveSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C50D94A2C2F26510073447C /* FiveSide.swift */; };
+		7C50D94D2C2F26760073447C /* FourSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C50D94C2C2F26760073447C /* FourSide.swift */; };
+		7C50D94F2C2F269C0073447C /* OneSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C50D94E2C2F269C0073447C /* OneSide.swift */; };
+		7C50D9512C2F26AC0073447C /* TwoSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C50D9502C2F26AC0073447C /* TwoSide.swift */; };
+		7C50D9532C2F26BA0073447C /* ThreeSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C50D9522C2F26BA0073447C /* ThreeSide.swift */; };
+		7C50D9552C2F26CB0073447C /* SixSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C50D9542C2F26CB0073447C /* SixSide.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C0DFD742C2DDBF800D5D940 /* DiceResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceResults.swift; sourceTree = "<group>"; };
 		7C2BC6CE2C2B3FA100D526D9 /* High Roller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "High Roller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2BC6D12C2B3FA100D526D9 /* High_RollerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = High_RollerApp.swift; sourceTree = "<group>"; };
 		7C2BC6D32C2B3FA100D526D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7C2BC6D52C2B3FA300D526D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C2BC6D82C2B3FA300D526D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7C2BC6DF2C2B3FDB00D526D9 /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
+		7C50D9442C2F0F050073447C /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		7C50D9462C2F22A50073447C /* RollDiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollDiceView.swift; sourceTree = "<group>"; };
+		7C50D94A2C2F26510073447C /* FiveSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveSide.swift; sourceTree = "<group>"; };
+		7C50D94C2C2F26760073447C /* FourSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSide.swift; sourceTree = "<group>"; };
+		7C50D94E2C2F269C0073447C /* OneSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSide.swift; sourceTree = "<group>"; };
+		7C50D9502C2F26AC0073447C /* TwoSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSide.swift; sourceTree = "<group>"; };
+		7C50D9522C2F26BA0073447C /* ThreeSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeSide.swift; sourceTree = "<group>"; };
+		7C50D9542C2F26CB0073447C /* SixSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixSide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +73,11 @@
 			children = (
 				7C2BC6D12C2B3FA100D526D9 /* High_RollerApp.swift */,
 				7C2BC6D32C2B3FA100D526D9 /* ContentView.swift */,
+				7C50D9442C2F0F050073447C /* ResultsView.swift */,
 				7C2BC6DF2C2B3FDB00D526D9 /* DiceView.swift */,
+				7C50D9562C2F26D40073447C /* DiceSides */,
+				7C50D9462C2F22A50073447C /* RollDiceView.swift */,
+				7C0DFD742C2DDBF800D5D940 /* DiceResults.swift */,
 				7C2BC6D52C2B3FA300D526D9 /* Assets.xcassets */,
 				7C2BC6D72C2B3FA300D526D9 /* Preview Content */,
 			);
@@ -68,6 +90,19 @@
 				7C2BC6D82C2B3FA300D526D9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7C50D9562C2F26D40073447C /* DiceSides */ = {
+			isa = PBXGroup;
+			children = (
+				7C50D94E2C2F269C0073447C /* OneSide.swift */,
+				7C50D9502C2F26AC0073447C /* TwoSide.swift */,
+				7C50D9522C2F26BA0073447C /* ThreeSide.swift */,
+				7C50D94C2C2F26760073447C /* FourSide.swift */,
+				7C50D94A2C2F26510073447C /* FiveSide.swift */,
+				7C50D9542C2F26CB0073447C /* SixSide.swift */,
+			);
+			path = DiceSides;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +175,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C50D94B2C2F26510073447C /* FiveSide.swift in Sources */,
+				7C50D9472C2F22A50073447C /* RollDiceView.swift in Sources */,
+				7C50D94D2C2F26760073447C /* FourSide.swift in Sources */,
+				7C50D94F2C2F269C0073447C /* OneSide.swift in Sources */,
 				7C2BC6D42C2B3FA100D526D9 /* ContentView.swift in Sources */,
+				7C50D9552C2F26CB0073447C /* SixSide.swift in Sources */,
+				7C50D9532C2F26BA0073447C /* ThreeSide.swift in Sources */,
+				7C50D9512C2F26AC0073447C /* TwoSide.swift in Sources */,
 				7C2BC6E02C2B3FDB00D526D9 /* DiceView.swift in Sources */,
 				7C2BC6D22C2B3FA100D526D9 /* High_RollerApp.swift in Sources */,
+				7C50D9452C2F0F050073447C /* ResultsView.swift in Sources */,
+				7C0DFD752C2DDBF800D5D940 /* DiceResults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

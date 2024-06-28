@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            DiceView()
+            
+        TabView() {
+            RollDiceView()
+                .tabItem {
+                    Label("Hello", systemImage:"dice")
+                }
+            
+            ResultsView()
+                .tabItem {
+                    Label("Check your results", systemImage: "list.number")
+                }
         }
-        .padding()
     }
 }
 

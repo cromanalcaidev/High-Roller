@@ -9,12 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var diceSide = DiceSide.four
+    @State private var secondDiceSide = DiceSide.two
+    
     var body: some View {
             
         TabView() {
+//            RollDiceView(diceSide: $diceSide, secondDiceSide: $secondDiceSide)
             RollDiceView()
                 .tabItem {
-                    Label("Hello", systemImage:"dice")
+                    Label("Game on!", systemImage:"dice")
                 }
             
             ResultsView()

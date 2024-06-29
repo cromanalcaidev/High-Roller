@@ -21,6 +21,7 @@
 		7C50D9512C2F26AC0073447C /* TwoSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C50D9502C2F26AC0073447C /* TwoSide.swift */; };
 		7C50D9532C2F26BA0073447C /* ThreeSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C50D9522C2F26BA0073447C /* ThreeSide.swift */; };
 		7C50D9552C2F26CB0073447C /* SixSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C50D9542C2F26CB0073447C /* SixSide.swift */; };
+		7CDD9C242C3032EB00E9E0ED /* BettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDD9C232C3032EB00E9E0ED /* BettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		7C50D9502C2F26AC0073447C /* TwoSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSide.swift; sourceTree = "<group>"; };
 		7C50D9522C2F26BA0073447C /* ThreeSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeSide.swift; sourceTree = "<group>"; };
 		7C50D9542C2F26CB0073447C /* SixSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixSide.swift; sourceTree = "<group>"; };
+		7CDD9C232C3032EB00E9E0ED /* BettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				7C2BC6DF2C2B3FDB00D526D9 /* DiceView.swift */,
 				7C50D9562C2F26D40073447C /* DiceSides */,
 				7C50D9462C2F22A50073447C /* RollDiceView.swift */,
+				7CDD9C232C3032EB00E9E0ED /* BettingView.swift */,
 				7C0DFD742C2DDBF800D5D940 /* DiceResults.swift */,
 				7C2BC6D52C2B3FA300D526D9 /* Assets.xcassets */,
 				7C2BC6D72C2B3FA300D526D9 /* Preview Content */,
@@ -184,6 +187,7 @@
 				7C50D9532C2F26BA0073447C /* ThreeSide.swift in Sources */,
 				7C50D9512C2F26AC0073447C /* TwoSide.swift in Sources */,
 				7C2BC6E02C2B3FDB00D526D9 /* DiceView.swift in Sources */,
+				7CDD9C242C3032EB00E9E0ED /* BettingView.swift in Sources */,
 				7C2BC6D22C2B3FA100D526D9 /* High_RollerApp.swift in Sources */,
 				7C50D9452C2F0F050073447C /* ResultsView.swift in Sources */,
 				7C0DFD752C2DDBF800D5D940 /* DiceResults.swift in Sources */,

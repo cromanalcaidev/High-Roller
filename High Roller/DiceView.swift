@@ -9,10 +9,15 @@ import SwiftUI
 
 struct DiceView: View {
     
+    @Binding var diceSide: DiceSide
+    
+    @State private var counter = 3
+    
+    @Binding var rolledValue1: Int
+    @Binding var rolledValue2: Int
+    
     var body: some View {
-        
         VStack {
-            
             ZStack {
                 RoundedRectangle(cornerRadius: 24, style: .continuous)
                     .fill(.blue)
@@ -22,14 +27,25 @@ struct DiceView: View {
                     .fill(.white)
                     .frame(width: 113, height: 115)
                 
-                OneSide()
+                switch diceSide {
+                case .one:
+                    OneSide()
+                case .two:
+                    TwoSide()
+                case .three:
+                    ThreeSide()
+                case .four:
+                    FourSide()
+                case .five:
+                    FiveSide()
+                case .six:
+                    SixSide()
+                }    
             }
-            
         }
-        
     }
 }
 
 #Preview {
-    DiceView()
+    DiceView(diceSide: .constant(.four), rolledValue1: .constant(4), rolledValue2: .constant(3))
 }

@@ -47,3 +47,8 @@ struct DiceResult: Codable, Hashable, Identifiable {
     
     static let example = DiceResult(rolledValue1: 1, rolledValue2: 4, rolledValueSum: 5)
 }
+
+
+enum DiceSide {
+    case one, two, three, four, five, six
+}

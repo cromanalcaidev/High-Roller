@@ -12,6 +12,7 @@ struct ThreeSide: View {
         VStack {
             HStack {
                 Circle()
+                    .fill(.white)
                     .frame(width: 20, height: 20)
                 
                 Spacer()
@@ -35,6 +36,7 @@ struct ThreeSide: View {
                 Spacer()
                 
                 Circle()
+                    .fill(.white)
                     .frame(width: 20, height: 20)
                 
             }

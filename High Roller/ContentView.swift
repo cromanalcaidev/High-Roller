@@ -15,7 +15,6 @@ struct ContentView: View {
     var body: some View {
             
         TabView() {
-//            RollDiceView(diceSide: $diceSide, secondDiceSide: $secondDiceSide)
             RollDiceView()
                 .tabItem {
                     Label("Game on!", systemImage:"dice")

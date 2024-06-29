@@ -18,7 +18,7 @@ struct RollDiceView: View {
     var guessYourResult = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     
     @State private var selected = "I'll get more than"
-    @State private var initialBet = 1.0
+    @State private var initialBet = 0.0
     @State private var userCredit = 2.0
 
     var message = "Choose how many sides you want:"
@@ -36,32 +36,28 @@ struct RollDiceView: View {
         VStack {
             
             Section() {
-                if initialBet > 0 {
-                    Text("Your credit is: \(userCredit.formatted())")
-                        .font(.headline)
+                if initialBet >= 0 {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .fill(.green)
+                            .frame(maxWidth: 170, maxHeight: 53)
+                        
+                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .fill(.white)
+                            .frame(maxWidth: 164, maxHeight: 48)
+                        
+                        Text("Your credit is: \(userCredit.formatted())")
+                            .font(.headline)
+                    }
+                    .frame(maxWidth: 170)
                 }
             }
-            .frame(width: 300, height: 50, alignment: .topTrailing)
-            
-            Section() {
-                Text("How many dice you wanna roll?")
-                    .font(.headline)
-                
-                Button() {
-                    addDice()
-                } label: {
-                    Text("\(diceNumberMessage)")
-                        .frame(width: 100)
-                }
-                .controlSize(.regular)
-                .buttonStyle(.borderedProminent)
-                .controlSize(.regular)
-                .buttonBorderShape(.automatic)
-            }
+            .frame(maxWidth: 300, maxHeight: 63)
+
             
             if oneToRoll {
                 DiceView(diceSide: $diceSide, rolledValue1: $rolledValue1, rolledValue2: $rolledValue2)
-                    .frame(maxWidth: 290, maxHeight: 170, alignment: .center)
+                    .frame(maxWidth: 290, maxHeight: 130, alignment: .center)
             } else {
                 HStack {
                     DiceView(diceSide: $diceSide, rolledValue1: $rolledValue1, rolledValue2: $rolledValue2)
@@ -70,40 +66,87 @@ struct RollDiceView: View {
                     
                     DiceView(diceSide: $secondDiceSide, rolledValue1: $rolledValue1, rolledValue2: $rolledValue2)
                 }
-                .frame(maxWidth: 290, maxHeight: 170, alignment: .center)
+                .frame(maxWidth: 330, maxHeight: 130, alignment: .center)
             }
+            
+            Section {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 24, style: .continuous)
+                        .fill(.indigo)
+                        .frame(maxWidth: 330, maxHeight: 116)
+                    
+                    RoundedRectangle(cornerRadius: 24, style: .continuous)
+                        .fill(.white)
+                        .frame(maxWidth: 323, maxHeight: 110)
+                    
+                    VStack {
+                        Text("How many dice you wanna roll?")
+                            .font(.headline)
+                        
+                        Button() {
+                            addDice()
+                        } label: {
+                            Text("\(diceNumberMessage)")
+                                .frame(width: 100)
+                        }
+                        .controlSize(.regular)
+                        .buttonStyle(.borderedProminent)
+                        .controlSize(.regular)
+                        .buttonBorderShape(.automatic)
+                    }
+                }
+            }
+            .frame(maxHeight: 126)
             
             Section() {
-                Text("Wanna make the game a little spicy?")
-                    .padding(.top, 10)
-                
-                HStack {
-                    Text("Place your bet:")
+                ZStack {
+                    RoundedRectangle(cornerRadius: 24, style: .continuous)
+                        .fill(.red)
+                        .frame(maxWidth: 330, maxHeight: 130)
                     
-                    TextField("0", value: $initialBet, format: .number)
-                        .frame(width: 20)
-                }
-                .frame(width: 290, alignment: .center)
-                
-                if initialBet > 0 {
-                    BettingView(selected: $selected)
+                    RoundedRectangle(cornerRadius: 24, style: .continuous)
+                        .fill(.white)
+                        .frame(maxWidth: 323, maxHeight: 125)
+                    VStack {
+                        Text("Wanna make the game a little spicy?")
+                            .font(.headline)
+                        
+                        HStack {
+                            Text("Place your bet:")
+                            
+                            TextField("0", value: $initialBet, format: .number)
+                                .frame(width: 20)
+                        }
+                        
+                        if initialBet > 0 {
+                            BettingView(oneToRoll: $oneToRoll, selected: $selected)
+                        }
+                    }
                 }
             }
-            .frame(width: 300)
+            .frame(maxHeight: 140)
             
-            VStack {
-                Button("Roll dice", action: roll)
-                    .buttonStyle(.borderedProminent)
-                    .controlSize(.regular)
-                    .buttonBorderShape(.automatic)
+            
+            ZStack {
+                RoundedRectangle(cornerRadius: 24, style: .continuous)
+                    .fill(.yellow)
+                    .frame(maxWidth: 330, maxHeight: 100)
                 
+                RoundedRectangle(cornerRadius: 24, style: .continuous)
+                    .fill(.white)
+                    .frame(maxWidth: 323, maxHeight: 93)
                 
-                Text(diceNumberMessage == "Gimme two" ? "You got \(rolledValue1)" : "You got \(rolledValue1) and \(rolledValue2)")
-                
-                if diceNumberMessage == "Just one" { Text("Your total this round is: \(rolledValue1 + rolledValue2)")
+                VStack {
+                    Button("Roll dice", action: roll)
+                        .buttonStyle(.borderedProminent)
+                        .controlSize(.regular)
+                        .buttonBorderShape(.automatic)
+                    
+                    Text(diceNumberMessage == "Gimme two" ? "You got \(rolledValue1) this turn" : "You got \(rolledValue1 + rolledValue2) this turn")
+                        .font(.headline)
                 }
+                .frame(maxHeight: 110)
             }
-            .frame(height: 200)
         }
         .alert("You won!", isPresented: $iWon) {
             Button("Great", role: .cancel) {

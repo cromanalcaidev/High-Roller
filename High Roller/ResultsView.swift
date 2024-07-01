@@ -13,9 +13,67 @@ struct ResultsView: View {
     
     var body: some View {        
         if diceResults.diceResults.isEmpty == false {
-            List {
-                ForEach(diceResults.diceResults, id: \.self) { result in
-                    Text("\(result.rolledValue1) & \(result.rolledValue2)")
+            NavigationStack {
+                ScrollView {
+                    VStack {
+                        ForEach(diceResults.diceResults, id: \.self) { result in
+                            if result.twoDice == false {
+                                
+                                Button("press me") {
+                                    print(result.twoDice)
+                                }
+                                
+                                ZStack {
+                                    CardResultView(border: result.didIWin == true ? .green : .red)
+                                        .frame(minHeight: 110)
+                                    
+                                    HStack {
+                                        VStack {
+                                            Text("Dice rolled: 1")
+                                                .frame (maxWidth: 100, alignment: .leading)
+                                            
+                                            Text("Result: \(result.rolledValue1)")
+                                                .frame(maxWidth: 100, alignment: .leading)
+                                        }
+                                        
+                                        Text(result.didIWin == true ? "You won this round!" : "You lost this round")
+                                            .frame(maxWidth: 140, alignment: .trailing)
+                                    }
+                                }
+                                .frame(maxHeight: 130, alignment: .center)
+                            } else if result.twoDice == true {
+                                
+                                Button("press me") {
+                                    print(result.twoDice)
+                                }
+                                
+                                ZStack {
+                                    CardResultView(border: result.didIWin == true ? .green : .red)
+                                        .frame(minHeight: 110)
+                                    
+                                    HStack {
+                                        VStack {
+                                            Text("Dice rolled: 2")
+                                                .frame (maxWidth: 100, alignment: .leading)
+                                            
+                                            Text("Result: \(result.rolledValueSum)")
+                                                .frame(maxWidth: 100, alignment: .leading)
+                                        }
+                                        
+                                        Text(result.didIWin == true ? "You won this round!" : "You lost this round")
+                                            .frame(maxWidth: 140, alignment: .trailing)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button("Restart results") {
+                            diceResults.diceResults = []
+                        }
+                    }
                 }
             }
         } else {

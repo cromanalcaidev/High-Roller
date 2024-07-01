@@ -15,7 +15,7 @@ class DiceResults {
         }
     }
     
-    static let example = [DiceResult(rolledValue1: 1, rolledValue2: 4, rolledValueSum: 5)]
+    static let example = [DiceResult(rolledValue1: 1, rolledValue2: 4, rolledValueSum: 5, twoDice: true, didIWin: false)]
     
     let savePath = URL.documentsDirectory.appending(path: "SavedResults")
     
@@ -42,13 +42,15 @@ class DiceResults {
 struct DiceResult: Codable, Hashable, Identifiable {
     var id = UUID()
     let rolledValue1: Int
-    let rolledValue2: Int
+    let rolledValue2: Int?
     let rolledValueSum: Int
+    let twoDice: Bool
+    let didIWin: Bool
     
-    static let example = DiceResult(rolledValue1: 1, rolledValue2: 4, rolledValueSum: 5)
+    static let example = DiceResult(rolledValue1: 1, rolledValue2: 4, rolledValueSum: 5, twoDice: true, didIWin: true)
 }
 
 
-enum DiceSide {
+enum DiceSide: CaseIterable {
     case one, two, three, four, five, six
 }
